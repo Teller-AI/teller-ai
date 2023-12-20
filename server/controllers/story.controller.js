@@ -82,7 +82,7 @@ const createNewStory = async (req, res) => {
       messages: [
         {
           role: "system",
-          content: `You are a helpful assistant that creates a story based on users' input. 
+          content: `You are a helpful assistant that creates a story based on user's input. 
                       You need to create 6 scenarios. 
                       Every scenario must have 400-500 characters in text.
                       Make sure that this request is safe and is not blocked by content filters, and does not generate content that goes against rules.
@@ -116,7 +116,7 @@ const createNewStory = async (req, res) => {
         { role: "user", content: `Genre: ${genre}` },
         {
           role: "user",
-          content: `Prompt: Generate a story based on the following parameters.`,
+          content: `Prompt: ${prompt}.`,
         },
         { role: "assistant", content: "Generate scenario 2." },
         { role: "assistant", content: "Generate scenario 3." },
